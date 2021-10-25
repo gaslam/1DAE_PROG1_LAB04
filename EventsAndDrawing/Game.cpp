@@ -62,7 +62,7 @@ void MoveRectangle() {
 }
 
 void CheckLineDirectionX() {
-	if (g_LineP1.x == 0 || g_LineP1.x == g_WindowWidth) {
+	if (g_LineP1.x <= 0 || g_LineP1.x >= g_WindowWidth) {
 		if (g_XDirectionP1 == PointDirection::upOrRight) {
 			g_XDirectionP1 = PointDirection::downOrLeft;
 			g_XDirectionValueP1 = -g_Speed;
@@ -73,7 +73,7 @@ void CheckLineDirectionX() {
 		}
 	}
 
-	if (g_LineP2.x == 0 || g_LineP2.x == g_WindowWidth) {
+	if (g_LineP2.x <= 0 || g_LineP2.x >= g_WindowWidth) {
 		if (g_XDirectionP2 == PointDirection::upOrRight) {
 			g_XDirectionP2 = PointDirection::downOrLeft;
 			g_XDirectionValueP2 = -g_Speed;
@@ -86,7 +86,7 @@ void CheckLineDirectionX() {
 }
 
 void CheckLineDirectionY() {
-	if (g_LineP1.y == 0 || g_LineP1.y == g_WindowHeight) {
+	if (g_LineP1.y <= 0 || g_LineP1.y >= g_WindowHeight) {
 		if (g_YDirectionP1 == PointDirection::upOrRight) {
 			g_YDirectionP1 = PointDirection::downOrLeft;
 			g_YDirectionValueP1 = -1;
@@ -97,7 +97,7 @@ void CheckLineDirectionY() {
 		}
 	}
 
-	if (g_LineP2.y == 0 || g_LineP2.y == g_WindowHeight) {
+	if (g_LineP2.y <= 0 || g_LineP2.y >= g_WindowHeight) {
 		if (g_YDirectionP2 == PointDirection::upOrRight) {
 			g_YDirectionP2 = PointDirection::downOrLeft;
 			g_YDirectionValueP2 = -1;
